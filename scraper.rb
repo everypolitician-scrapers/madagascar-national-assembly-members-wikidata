@@ -2,7 +2,6 @@
 # encoding: utf-8
 
 require 'wikidata/fetcher'
-require 'pry'
 
 names = EveryPolitician::Wikidata.wikipedia_xpath( 
   url: 'https://en.wikipedia.org/wiki/National_Assembly_(Madagascar)',
@@ -12,5 +11,4 @@ names = EveryPolitician::Wikidata.wikipedia_xpath(
 ) 
 
 EveryPolitician::Wikidata.scrape_wikidata(names: { en: names }, output: false)
-warn EveryPolitician::Wikidata.notify_rebuilder
 
